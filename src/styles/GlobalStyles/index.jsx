@@ -8,6 +8,8 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         min-height: 100vh;
+        background-color: ${props => props.theme.body};
+        color: ${props => props.theme.text};
     }
 `
 
