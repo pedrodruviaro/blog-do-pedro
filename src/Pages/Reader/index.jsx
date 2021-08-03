@@ -2,6 +2,8 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import Button from '../../components/Button'
 import FlexContainer from '../../components/FlexContainer'
+import { RiArrowGoBackFill } from "react-icons/ri";
+
 
 export default function Index(props) {
 
@@ -13,7 +15,7 @@ export default function Index(props) {
             <p>{props.post.description}</p>
             <p>{props.post.content}</p>
 
-            <Button onClick={() => history.push("/")}>Return to main page</Button>
+            <Button onClick={() => history.push("/")}>Return to main page<RiArrowGoBackFill /></Button>
         </FlexContainer>
     )
 }

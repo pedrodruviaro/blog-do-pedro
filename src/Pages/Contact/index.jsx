@@ -11,7 +11,14 @@ import { RiChatSmile2Line } from "react-icons/ri";
 import bannerContact from "../../images/contact.svg";
 import { BannerContainer } from "./styles";
 
+
+import emailjs from 'emailjs-com';
+import { useHistory } from "react-router";
+
 export default function Index() {
+
+  const history = useHistory()
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -29,31 +36,49 @@ export default function Index() {
     }
   }
 
-  function handleSubmit(e) {
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+
+  //   if (!messageError.valid) {
+  //     return;
+  //   }
+
+  //   console.log({ name, email, message });
+
+  //   setName("");
+  //   e.target[0].focus();
+  //   setEmail("");
+  //   setMessage("");
+  // }
+
+  function sendEmail(e) {
     e.preventDefault();
 
-    if (!messageError.valid) {
-      return;
-    }
+    emailjs.sendForm('service_2y29jom', 'gmail_template', e.target, 'user_37pn5F7XBS1rzbKxl2yb7')
+      .then((result) => {
+          console.log(result.text);
+          history.push("/")
+      }, (error) => {
+          console.log(error.text);
+      });
+      
 
-    console.log({ name, email, message });
-
-    setName("");
-    e.target[0].focus();
-    setEmail("");
-    setMessage("");
+      e.target.reset()
   }
+
+
 
   return (
     <div>
       <FlexContainer direction="column">
         <PrimaryTitle>Contact me!</PrimaryTitle>
-        <FormStyled onSubmit={handleSubmit}>
+        <FormStyled onSubmit={sendEmail}>
           <input
             type="text"
             placeholder="Name"
             value={name}
             required
+            name="name"
             onChange={(e) => setName(e.target.value)}
           />
           <input
@@ -61,12 +86,14 @@ export default function Index() {
             placeholder="email@example.com"
             value={email}
             required
+            name="email"
             onChange={(e) => setEmail(e.target.value)}
           />
           <textarea
             placeholder="Your message"
             value={message}
             required
+            name="message"
             onChange={(e) => setMessage(e.target.value)}
             onBlur={handleMessage}
           ></textarea>

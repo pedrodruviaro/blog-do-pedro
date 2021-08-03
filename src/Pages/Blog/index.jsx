@@ -5,23 +5,20 @@ import Button from '../../components/Button'
 import { useHistory } from "react-router-dom";
 import { PrimaryTitle } from "../../components/Typography";
 import { BiBookReader } from "react-icons/bi"
+//data articles
+import {articles} from '../../data/articles'
 
 export default function Index(props) {
 
     const history = useHistory()
 
-    const articles = [
-        {
-          title: "Tips about CSS",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsam ullam ad ea magni nesciunt magnam dolor aliquam vitae, ex, officia omnis id, illum minus explicabo voluptates. Odit, nam dolor?",
-          content: "aqui tem um conteudo",  
-        },
-        {
-            title: "Tips about JS",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsam ullam ad ea magni nesciunt magnam dolor aliquam vitae, ex, officia omnis id, illum minus explicabo voluptates. Odit, nam dolor?",
-            content: "aqui tem um conteudo",  
-          }
-    ]
+    // const articles = [
+    //     {
+    //       title: "Tips about CSS",
+    //       description: "Lorem ipsum dolor",
+    //       content: "aqui tem um conteudo",  
+    //     }
+    // ]
 
     function handleReader(post) {
        props.toggleCurrentPost(post)
