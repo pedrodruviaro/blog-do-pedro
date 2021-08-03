@@ -1,6 +1,6 @@
 import React from "react";
 import FlexContainer from "../../components/FlexContainer";
-import { Article } from "./styles";
+import { Article, GridArticleInfos } from "./styles";
 import Button from '../../components/Button'
 import { useHistory } from "react-router-dom";
 import { PrimaryTitle } from "../../components/Typography";
@@ -34,6 +34,13 @@ export default function Index(props) {
         {articles.map(article => (
             <Article key={article.title}>
                 <h3>{article.title}</h3>
+
+                <GridArticleInfos>
+                  <div>{article.author[0]}</div>
+                  <span className="category" >{article.category}</span>
+                  <span className="date" >{article.date}</span>
+                </GridArticleInfos>
+
                 <p>{article.description}</p>
                 <Button onClick={() => handleReader(article)}>Read the full article {<BiBookReader />} </Button>
           </Article>

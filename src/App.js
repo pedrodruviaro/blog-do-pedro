@@ -17,9 +17,9 @@ import MessageConfirmation from './Pages/MessageConfirmation'
 function App() {
   // reader
   const [currentPost, setCurrentPost] = useState({
-    title: "Nothing to see here... chose a post on the main page!",
+    description: `Nothing to see here... chose a post on the main page!`,
+    title: "",
     content: "",
-    description: "",
   });
 
   function toggleCurrentPost(post) {

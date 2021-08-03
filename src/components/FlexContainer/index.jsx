@@ -11,6 +11,7 @@ const FlexContainer = styled.div`
     justify-content:  ${props => props.justify ? props.justify : "center"};
     flex-direction: ${props => props.direction};
     gap: ${props => props.gap};
+
 `
 
 export default FlexContainer

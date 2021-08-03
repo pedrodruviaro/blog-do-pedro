@@ -13,11 +13,11 @@ export const HeaderStyled = styled.header`
     }
 
     .logo::before {
-        content: "<"
+        content: "<";
     }
 
     .logo::after {
-        content: "/>"
+        content: "/>";
     }
 `
 
@@ -30,12 +30,10 @@ export const LinksContainer = styled.nav`
         padding: .25rem;
         border: 1px solid transparent;
         border-radius: 5px;
-        outline: none;
         position: relative;
     }
 
-    a:hover,
-    a:focus {
+    a:hover {
         border: 1px solid ${props => props.theme.accent};
     }
 
