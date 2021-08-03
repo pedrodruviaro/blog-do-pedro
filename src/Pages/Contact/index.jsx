@@ -61,9 +61,6 @@ export default function Index() {
       }, (error) => {
           console.log(error.text);
       });
-      
-
-      e.target.reset()
   }
 
 
