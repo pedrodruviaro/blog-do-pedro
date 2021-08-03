@@ -13,6 +13,7 @@ import Contact from "./Pages/Contact";
 import Reader from "./Pages/Reader";
 import NotFound404 from "./Pages/NotFound404";
 import MessageConfirmation from './Pages/MessageConfirmation'
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   // reader
@@ -39,6 +40,7 @@ function App() {
       <GlobalStyles />
       <MainGrid>
         <BrowserRouter>
+        <ScrollToTop />
           <HeaderApp setDarkTheme={setDarkTheme} />
           <main>
             <Switch>
