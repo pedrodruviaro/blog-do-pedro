@@ -4,7 +4,7 @@ const FlexContainer = styled.div`
     width: 85%;
     margin: 0 auto;
     max-width: 1440px;
-    padding: 1.5rem;
+    padding: ${props => props.padding ? props.padding : "1.5rem"};
 
     display: flex;
     align-items: ${props => props.align ? props.align : "center"};

@@ -3,10 +3,8 @@ import styled from "styled-components";
 export const HeaderStyled = styled.header`
     box-shadow: ${props => props.theme.shadow} 0px 2px 4px;
 
-    h1 {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 1.5rem;
+    img {
+        width: 120px;
     }
 `
 

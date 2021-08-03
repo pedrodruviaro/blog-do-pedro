@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const AboutStyled = styled.div`
   img {
     width: 200px;
+    transition: transform 200ms ease-in-out;
+  }
+
+  img:hover {
+    transform: scale(1.1);
   }
 
   .text {
@@ -75,5 +80,16 @@ export const AboutLinksContainer = styled.div`
     a:focus {
         transform: scale(1.25);
         outline: 1px solid;
+    }
+`
+
+export const LinkBio = styled.a`
+  text-decoration: none;
+  color: ${props => props.theme.accent};
+  font-weight: 500;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
     }
 `

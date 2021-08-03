@@ -4,7 +4,7 @@ const MainGrid = styled.div`
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 8vh 1fr 6vh;
+    grid-template-rows: min-content 1fr 6vh;
     grid-template-areas: "header"
                             "main"
                             "footer";
@@ -13,6 +13,7 @@ const MainGrid = styled.div`
 
     header {
         grid-area: header;
+        align-self: center;
     }
 
     footer {
