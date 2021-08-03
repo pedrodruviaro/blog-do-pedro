@@ -10,7 +10,7 @@ export const HeaderStyled = styled.header`
     }
 `
 
-export const LinksContainer = styled.div`
+export const LinksContainer = styled.nav`
 
     a {
         color: inherit;
@@ -20,11 +20,16 @@ export const LinksContainer = styled.div`
         border: 1px solid transparent;
         border-radius: 5px;
         outline: none;
+        position: relative;
     }
 
     a:hover,
-    a:active,
     a:focus {
         border: 1px solid ${props => props.theme.accent};
+    }
+
+    .active {
+        color: ${props => props.theme.accent};
+        font-weight: 600;
     }
 `
