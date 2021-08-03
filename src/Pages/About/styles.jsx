@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const AboutStyled = styled.div`
-  padding: 1.5rem;
-
   img {
     width: 200px;
   }

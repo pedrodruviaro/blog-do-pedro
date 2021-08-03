@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 const Button = styled.button`
+
   border: none;
   outline: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
   font-size: 1rem;
   padding: 0.5em;
   background-color: ${(props) => props.theme.accent};
