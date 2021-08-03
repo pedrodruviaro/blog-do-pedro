@@ -66,7 +66,7 @@ export default function Index() {
   return (
     <div>
       <FlexContainer direction="column">
-        <PrimaryTitle>Contact me!!</PrimaryTitle>
+        <PrimaryTitle>Contact me!</PrimaryTitle>
         <FormStyled onSubmit={sendEmail}>
           <input
             type="text"

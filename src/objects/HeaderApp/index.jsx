@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import FlexContainer from "../../components/FlexContainer";
 import ThemeToggler from "../../components/ThemeToggler";
 import { HeaderStyled, LinksContainer } from "./styles";
-import logo from '../../images/demo.svg'
 
 export default function Index(props) {
   const location = useLocation();
