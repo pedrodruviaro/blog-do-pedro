@@ -9,7 +9,7 @@ import SpanErrorForm from "../../components/SpanErrorForm";
 import { RiChatSmile2Line } from "react-icons/ri";
 
 import bannerContact from "../../images/contact.svg";
-import { BannerContainer } from "./styles";
+import BannerContainer from "../../components/BannerContainer";
 
 
 import emailjs from 'emailjs-com';
@@ -24,6 +24,8 @@ export default function Index() {
   const [message, setMessage] = useState("");
 
   const [messageError, setMessageError] = useState({ valid: true, text: "" });
+
+  const [disabled, setDisabled] = useState(false)
 
   function handleMessage(e) {
     if (e.target.value.length < 10) {
@@ -57,7 +59,8 @@ export default function Index() {
     emailjs.sendForm('service_2y29jom', 'gmail_template', e.target, 'user_37pn5F7XBS1rzbKxl2yb7')
       .then((result) => {
           console.log(result.text);
-          history.push("/")
+          setDisabled(true)
+          history.push("/message-confirmation")
       }, (error) => {
           console.log(error.text);
       });
@@ -100,7 +103,7 @@ export default function Index() {
             </SpanErrorForm>
           ) : null}
 
-          <Button type="submit">
+          <Button type="submit" disabled={disabled}>
             Send
             <MdSend />
           </Button>

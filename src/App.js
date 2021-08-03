@@ -12,6 +12,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Reader from "./Pages/Reader";
 import NotFound404 from "./Pages/NotFound404";
+import MessageConfirmation from './Pages/MessageConfirmation'
 
 function App() {
   // reader
@@ -38,29 +39,32 @@ function App() {
       <GlobalStyles />
       <MainGrid>
         <BrowserRouter>
-          <HeaderApp setDarkTheme={setDarkTheme} />{" "}
+          <HeaderApp setDarkTheme={setDarkTheme} />
           <main>
             <Switch>
               <Route exact path="/">
                 <Blog toggleCurrentPost={toggleCurrentPost} />
-              </Route>{" "}
+              </Route>
               <Route exact path="/about">
                 <About />
-              </Route>{" "}
+              </Route>
               <Route exact path="/contact">
                 <Contact />
-              </Route>{" "}
+              </Route>
               <Route exact path="/reader">
-                <Reader post={currentPost} />{" "}
-              </Route>{" "}
+                <Reader post={currentPost} />
+              </Route>
+              <Route exact path="/message-confirmation">
+                <MessageConfirmation />
+              </Route>
               <Route path="*">
                 <NotFound404 />
-              </Route>{" "}
-            </Switch>{" "}
-          </main>{" "}
+              </Route>
+            </Switch>
+          </main>
         </BrowserRouter>
-        <footer> &copy; Copyright 2021 </footer>{" "}
-      </MainGrid>{" "}
+        <footer> &copy; Copyright 2021 </footer>
+      </MainGrid>
     </ThemeProvider>
   );
 }
