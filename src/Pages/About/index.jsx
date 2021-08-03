@@ -10,8 +10,8 @@ export default function Index() {
       <FlexContainer direction="column">
         <GridProfile>
           <img src={perfil} alt="Pedro profile" />
-          <h2>HI, I'm Pedro</h2>
-          <p>a front-end developer</p>
+          <h2>Hi, I'm <strong>Pedro</strong></h2>
+          <p>front-end dev</p>
         </GridProfile>
 
         <p className="text">

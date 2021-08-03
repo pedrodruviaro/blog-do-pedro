@@ -23,7 +23,7 @@ export const AboutStyled = styled.div`
 export const GridProfile = styled.div`
   width: min-content;
   margin: 4rem auto;
-  grid-column-gap: 1em;
+  grid-column-gap: 1.5em;
   grid-template-columns: min-content max-content;
   display: grid;
   grid-template-areas:
@@ -44,6 +44,13 @@ export const GridProfile = styled.div`
     grid-area: title;
     font-size: 3rem;
     align-self: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+
+  h2 strong {
+    font-weight: 600;
+    display: block;
   }
 
   p {
@@ -52,7 +59,7 @@ export const GridProfile = styled.div`
     align-self: baseline;
     padding: 0.25em;
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     text-align: right;
     position: relative;
     grid-column: -1/1;

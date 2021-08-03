@@ -3,8 +3,21 @@ import styled from "styled-components";
 export const HeaderStyled = styled.header`
     box-shadow: ${props => props.theme.shadow} 0px 2px 4px;
 
-    img {
-        width: 120px;
+    
+    .logo {
+        color: inherit;
+        text-decoration: none; 
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.125rem;
+        font-weight: 300;
+    }
+
+    .logo::before {
+        content: "<"
+    }
+
+    .logo::after {
+        content: "/>"
     }
 `
 

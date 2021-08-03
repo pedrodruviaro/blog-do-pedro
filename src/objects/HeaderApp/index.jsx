@@ -26,7 +26,7 @@ export default function Index(props) {
   return (
     <HeaderStyled>
       <FlexContainer justify="space-between" padding=".75rem 1.5rem">
-        <Link to="/" ><img src={logo} alt="" /></Link>
+        <Link to="/" className="logo" >devpedro</Link>
 
         <LinksContainer>
           {links.map((link) => (
