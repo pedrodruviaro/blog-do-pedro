@@ -8,6 +8,9 @@ import { MdSend } from "react-icons/md";
 import SpanErrorForm from "../../components/SpanErrorForm";
 import { RiChatSmile2Line } from "react-icons/ri";
 
+import bannerContact from "../../images/contact.svg";
+import { BannerContainer } from "./styles";
+
 export default function Index() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -29,14 +32,14 @@ export default function Index() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if(!messageError.valid){
-        return
+    if (!messageError.valid) {
+      return;
     }
 
     console.log({ name, email, message });
 
     setName("");
-    e.target[0].focus()
+    e.target[0].focus();
     setEmail("");
     setMessage("");
   }
@@ -80,6 +83,10 @@ export default function Index() {
             <MdSend />
           </Button>
         </FormStyled>
+
+        <BannerContainer>
+          <img src={bannerContact} alt="" />
+        </BannerContainer>
       </FlexContainer>
     </div>
   );
