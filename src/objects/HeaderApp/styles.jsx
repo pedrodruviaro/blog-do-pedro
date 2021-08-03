@@ -25,6 +25,6 @@ export const LinksContainer = styled.div`
     a:hover,
     a:active,
     a:focus {
-        border: 1px solid;
+        border: 1px solid ${props => props.theme.accent};
     }
 `

@@ -9,5 +9,5 @@ export const darkTheme = {
     body: "#333",
     text: "#fff",
     accent: "#ff4757",
-    shadow: "rgba(255, 255, 255, 0.18)"
+    shadow: "rgba(177, 177, 177, 0.18)"
 }

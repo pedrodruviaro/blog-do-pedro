@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import FlexContainer from '../../components/FlexContainer'
 import ThemeToggler from '../../components/ThemeToggler'
 import { HeaderStyled, LinksContainer } from './styles'
@@ -10,9 +11,9 @@ export default function Index(props) {
             <h1>Pedro's Blog</h1>
 
             <LinksContainer>
-                <a href="#">about me</a>
-                <a href="#">post list</a>
-                <a href="#">contac</a>
+                <Link to="/">blog</Link>
+                <Link to="/about">about me</Link>
+                <Link to="/contact">contact</Link>
             </LinksContainer>
 
             <ThemeToggler setDarkTheme={props.setDarkTheme} />
