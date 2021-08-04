@@ -12,6 +12,17 @@ const FlexContainer = styled.div`
     flex-direction: ${props => props.direction};
     gap: ${props => props.gap};
 
+
+    @media (max-width: 600px){
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+
+    @media (max-width: 768px){
+        padding: 1rem;
+        width: 90%;
+    }
 `
 
 export default FlexContainer

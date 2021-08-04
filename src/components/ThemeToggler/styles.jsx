@@ -43,4 +43,11 @@ export const Toggler = styled.div`
         transform: translateX(24px);
     }
 
+
+    @media (max-width: 600px) {
+        position: absolute;
+        top: .67rem;
+        right: 1rem;
+    }
+
 `

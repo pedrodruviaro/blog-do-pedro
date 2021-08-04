@@ -2,7 +2,9 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import FlexContainer from "../../components/FlexContainer";
 import ThemeToggler from "../../components/ThemeToggler";
-import { HeaderStyled, LinksContainer } from "./styles";
+import { HeaderStyled } from "./styles";
+import Logo from '../../components/Logo'
+import LinksContainer from "../../components/LinksContainer";
 
 export default function Index(props) {
   const location = useLocation();
@@ -25,7 +27,9 @@ export default function Index(props) {
   return (
     <HeaderStyled>
       <FlexContainer justify="space-between" padding=".75rem 1.5rem">
-        <Link to="/" className="logo" >devpedro</Link>
+        <Link to="/">
+          <Logo />
+        </Link>
 
         <LinksContainer>
           {links.map((link) => (

@@ -11,7 +11,7 @@ export const AboutStyled = styled.div`
   }
 
   .text {
-      width: 80%;
+      width: 90%;
       max-width: 600px;
       text-align: center;
       margin: 0 auto;
@@ -67,6 +67,25 @@ export const GridProfile = styled.div`
     width: calc(100% + 1.5em);
     color: #333;
   }
+
+  @media (max-width: 600px){
+    grid-template-columns: min-content;
+    grid-template-areas:
+    "title"
+    "text"
+    "img";
+    text-align: center;
+
+
+    p {
+      width: max-content;
+      margin: 1rem auto;
+      position: static;
+      grid-column: 1;
+      padding: 0.25rem 1rem
+    }
+  }
+
 `;
 
 export const AboutLinksContainer = styled.div`

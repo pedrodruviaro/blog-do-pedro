@@ -14,6 +14,7 @@ import Reader from "./Pages/Reader";
 import NotFound404 from "./Pages/NotFound404";
 import MessageConfirmation from './Pages/MessageConfirmation'
 import ScrollToTop from "./components/ScrollToTop";
+import FooterApp from './objects/FooterApp'
 
 function App() {
   // reader
@@ -65,7 +66,7 @@ function App() {
             </Switch>
           </main>
         </BrowserRouter>
-        <footer> &copy; Copyright 2021 </footer>
+        <FooterApp> &copy; Copyright 2021 </FooterApp>
       </MainGrid>
     </ThemeProvider>
   );
