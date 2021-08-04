@@ -1,7 +1,8 @@
 import React from "react";
 import FlexContainer from "../../components/FlexContainer";
 import LinksContainer from "../../components/LinksContainer";
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { CgWorkAlt } from "react-icons/cg";
 
 import Logo from "../../components/Logo";
 import { FooterStyled } from "./styles";
@@ -16,19 +17,19 @@ export default function index() {
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://www.linkedin.com/in/pedro-henrique-dalmolin-ruviaro-4b4a00209/"
+            href="https://github.com/pedrodruviaro"
           >
-            <FaLinkedinIn />
-            Linkedin
+            <FaGithub />
+            GitHub
           </a>
 
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://github.com/pedrodruviaro"
+            href="https://pedrodruviaro.netlify.app/"
           >
-            <FaGithub />
-            GitHub
+            <CgWorkAlt />
+            Portfolio
           </a>
         </LinksContainer>
 

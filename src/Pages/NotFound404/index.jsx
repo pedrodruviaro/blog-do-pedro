@@ -4,6 +4,7 @@ import { NotFoundContainer } from "./styles.jsx";
 import Button from "../../components/Button";
 import { useHistory } from "react-router-dom";
 import FlexContainer from "../../components/FlexContainer";
+import BannerContainer from "../../components/BannerContainer";
 
 export default function Index() {
   const history = useHistory();
@@ -14,7 +15,9 @@ export default function Index() {
         <h1>
           Sorry, page not found... <strong>:(</strong>
         </h1>
+        <BannerContainer>
         <img src={illustration} alt="Illustration of a guy looking a map." />
+        </BannerContainer>
         <Button onClick={() => history.push("/")}>Back to home</Button>
       </FlexContainer>
     </NotFoundContainer>

@@ -7,6 +7,10 @@ const BannerContainer = styled.div`
 img {
     max-width: 100%;
 }
+
+@media (max-width: 600px) {
+    width: 100%;
+}
 `
 
 export default BannerContainer

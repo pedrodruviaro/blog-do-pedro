@@ -1,4 +1,5 @@
 // #f1f2f6
+// #ff4757   => accent 
 
 export const lightTheme = {
     body: "#fefefe",
